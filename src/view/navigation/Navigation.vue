@@ -119,7 +119,7 @@ export default {
         icon: "mdi-bike",
       },
     ],
-
+    loading: false,
     width: 300,
   }),
   methods: {},
