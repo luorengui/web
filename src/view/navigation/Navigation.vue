@@ -103,15 +103,15 @@ export default {
         icon: "mdi-nature",
       },
       {
-        text: "电竞",
+        text: "篮球",
         icon: "mdi-glass-wine",
       },
       {
-        text: "社会热点",
+        text: "股市",
         icon: "mdi-calendar-range",
       },
       {
-        text: "篮球",
+        text: "墙外",
         icon: "mdi-map-marker",
       },
       {

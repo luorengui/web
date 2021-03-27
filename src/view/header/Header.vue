@@ -3,7 +3,7 @@
     <v-app-bar app color="white" light>
       <v-app-bar-nav-icon @click="clickHandle"></v-app-bar-nav-icon>
 
-      <v-toolbar-title>个人战</v-toolbar-title>
+      <v-toolbar-title>hello</v-toolbar-title>
 
       <template v-slot:extension>
         <v-tabs v-model="tab" align-with-title>
@@ -23,16 +23,13 @@
 </template>
 
 <script>
-// import MainBar from ".../view/main/Main";
 export default {
   name: "TitleBar",
-  // components: {
-  //   MainBar,
-  // },
+
   data: () => ({
     drawer: true,
     tab: null,
-    items: ["web", "shopping", "videos", "images", "news"],
+    items: ["足球", "shopping", "videos", "images", "news"],
     text:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
   }),

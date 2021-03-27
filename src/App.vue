@@ -3,7 +3,7 @@
     <v-app id="inspire">
       <navigation-bar :drawer="drawer"></navigation-bar>
       <title-bar @isvisable="changeVisable"></title-bar>
-      <!-- <main-bar></main-bar> -->
+      <main-bar></main-bar>
       <footer-bar></footer-bar>
     </v-app>
   </div>
@@ -12,19 +12,19 @@
 <script>
 import NavigationBar from "./view/navigation/Navigation";
 import TitleBar from "./view/header/Header";
-// import MainBar from "./view/main/Main";
 import FooterBar from "./view/footer/Footer.vue";
+import MainBar from "./view/main/Main.vue";
 
 export default {
   name: "App",
   components: {
     NavigationBar,
     TitleBar,
-    // MainBar,
     FooterBar,
+    MainBar,
   },
   data: () => ({
-    drawer: {isvisable:true},
+    drawer: {isvisable:false},
   }),
   methods: {
     changeVisable(data) {
