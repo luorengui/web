@@ -30,8 +30,8 @@ export default {
     showNav(isShow) {
       this.drawer.isVisable = isShow;
     },
-    getSelectTab(name){
-      this.selectTab = name
+    getSelectTab(tab){
+      this.selectTab = tab
     }
   },
 };
