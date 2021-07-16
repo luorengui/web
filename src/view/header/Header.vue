@@ -1,25 +1,23 @@
 <template>
   <v-container>
-    <v-app-bar app color="white">
-      <v-app-bar-nav-icon @click="clickHandle"></v-app-bar-nav-icon>
-
+    <v-app-bar app  color="white">
+      <v-app-bar-nav-icon @click="showNav"></v-app-bar-nav-icon>
       <v-toolbar-title>hello</v-toolbar-title>
-
     </v-app-bar>
   </v-container>
 </template>
 
 <script>
 export default {
-  name: "TitleBar",
+  name: "Header",
 
   data: () => ({
-    drawer: true,
+    isvisible: true,
 
   }),
   methods: {
-    clickHandle() {
-      this.$emit("isvisable", (this.drawer = !this.drawer));
+    showNav() {
+      this.$emit("showNav", (this.isvisible = !this.isvisible));
     },
   },
 

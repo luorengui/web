@@ -1,12 +1,12 @@
 <template>
-  <v-container class="grey lighten-5">
+  <v-container>
 
   </v-container>
 </template>
 
 <script>
 export default {
-  name: "MainBar",
+  name: "Main",
   data: () => ({}),
   props: {
     source: String,

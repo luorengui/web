@@ -1,21 +1,21 @@
 <template>
-  <v-container fluid>
+  <v-card>
     <v-navigation-drawer
-      v-model="drawer.isvisable"
+      v-model="isvisable"
       app
       :width="width"
       :value="true"
-      stateless
+      absolute
+      temporary
     >
-
     </v-navigation-drawer>
-  </v-container>
+</v-card>
 </template>
 
 <script>
 export default {
-  name: "NavigationBar",
-  props: ["drawer"],
+  name: "Navigation",
+  props: ["isvisable"],
   data: () => ({
     width:"12%",
     loading: false,
