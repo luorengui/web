@@ -1,7 +1,7 @@
 <template>
 
   <v-app>
-    <Navigation :isvisable="isvisable"></Navigation>
+    <Navigation :drawer="drawer"></Navigation>
     <Header @showNav="showNav"></Header>
     <Main></Main>
     <Footer></Footer>
@@ -23,11 +23,11 @@ export default {
     Main,
   },
   data: () => ({
-    isvisable: false,
+    drawer: {isVisable:false},
   }),
   methods: {
     showNav(isShow) {
-      this.isvisable = isShow;
+      this.drawer.isVisable = isShow;
     },
   },
 };

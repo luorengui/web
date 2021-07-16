@@ -1,12 +1,13 @@
 <template>
   <v-card>
     <v-navigation-drawer
-      v-model="isvisable"
+      v-model="drawer.isVisable"
       app
       :width="width"
       :value="true"
       absolute
       temporary
+
     >
     </v-navigation-drawer>
 </v-card>
@@ -15,11 +16,14 @@
 <script>
 export default {
   name: "Navigation",
-  props: ["isvisable"],
+  props: ["drawer"],
+  
   data: () => ({
     width:"12%",
-    loading: false,
+    isvisible:true,
   }),
-  methods: {},
+  methods: {
+
+  },
 };
 </script>
