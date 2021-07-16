@@ -2,7 +2,7 @@
 
   <v-app>
     <Navigation :drawer="drawer"></Navigation>
-    <Header @showNav="showNav"></Header>
+    <Header @showNav="showNav" @getSelectTab="getSelectTab"></Header>
     <Main></Main>
     <Footer></Footer>
   </v-app>
@@ -24,11 +24,15 @@ export default {
   },
   data: () => ({
     drawer: {isVisable:false},
+    selectTab:"",
   }),
   methods: {
     showNav(isShow) {
       this.drawer.isVisable = isShow;
     },
+    getSelectTab(name){
+      this.selectTab = name
+    }
   },
 };
 </script>

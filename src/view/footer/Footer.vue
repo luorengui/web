@@ -8,6 +8,6 @@
 
 <script>
 export default {
-  name: "FooterBar",
+  name: "Footer",
 };
 </script>
