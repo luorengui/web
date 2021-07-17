@@ -1,5 +1,5 @@
 <template>
-  <v-container>
+  <!-- <v-container> -->
     <v-app-bar app color="white">
       <v-app-bar-nav-icon @click="showNav"></v-app-bar-nav-icon>
       <v-toolbar-title>hello</v-toolbar-title>
@@ -10,21 +10,22 @@
             v-for="item in tab"
             :key="item.name"
             @click="selectTab(item.name)"
+            
           >
             {{ item.value }}
           </v-tab>
         </v-tabs>
       </template>
     </v-app-bar>
-  </v-container>
+  <!-- </v-container> -->
 </template>
 
 <script>
 export default {
   name: "Header",
-
+  // props:["drawer"],
   data: () => ({
-    drawer: true,
+    drawer: false,
     tab: [
       {
         name: "Blog",
@@ -45,7 +46,7 @@ export default {
       this.$emit("getSelectTab", (name));
     },
     showNav() {
-      this.$emit("showNav", (this.isvisible = !this.isvisible));
+      this.$emit("showNav", (this.drawer = !this.drawer));
     },
   },
 

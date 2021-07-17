@@ -20,7 +20,7 @@ export default {
   
   data: () => ({
     width:"12%",
-    isvisible:true,
+    // isvisible:true,
   }),
   methods: {
 

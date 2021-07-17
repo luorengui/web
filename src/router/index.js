@@ -11,8 +11,14 @@ const baseRouters = [{
     path:"/base",
     name:'base',
          component: () =>
-    import ('../view/Base.vue')
-}]
+    import ('../view/Base.vue')  // 路由懒加载写法
+},{
+    path:"/main/:tab",
+    name:"main",
+    component:()=>import('../view/main/Main.vue')
+}
+
+]
 
 
 const createRouter = () => new Router({
