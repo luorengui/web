@@ -12,6 +12,7 @@ export default {
   data: () => ({
     drawer: false,
    
+   
   }),
   methods: {
     selectTab(name) {
