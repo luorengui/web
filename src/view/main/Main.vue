@@ -1,33 +1,37 @@
 <template>
-  <v-content class="blog-content">
-    <v-tabs v-model="tab" centered>
-      <v-tabs-slider color="yellow"></v-tabs-slider>
-      <v-tab v-for="item in items" :key="item.name">
-        {{ item.value }}
-      </v-tab>
-    </v-tabs>
-    <!-- 内容 -->
-    <v-container>
-      <v-row dense>
-        <template v-for="n in 8">
-          <v-col :key="n">
-            <Card></Card>
-          </v-col>
-          <v-responsive
-            v-if="n === 4"
-            :key="`width-${n}`"
-            width="100%"
-          ></v-responsive>
-        </template>
-      </v-row>
-    </v-container>
+  <v-content>
+    <v-content class="blog-content">
+      <v-tabs v-model="tab" centered>
+        <v-tabs-slider color="yellow"></v-tabs-slider>
+        <v-tab v-for="item in items" :key="item.name">
+          {{ item.value }}
+        </v-tab>
+      </v-tabs>
+      <!-- 内容 -->
+      <v-container>
+        <v-row dense>
+          <template v-for="n in 6">
+            <v-col :key="n">
+              <Card></Card>
+            </v-col>
+            <v-responsive
+              v-if="n === 3"
+              :key="`width-${n}`"
+              width="100%"
+            ></v-responsive>
+          </template>
+        </v-row>
+      </v-container>
 
+      <!-- 分页 -->
+      <div class="text-center">
+        <v-pagination v-model="page" :length="6"></v-pagination>
+      </div>
+    </v-content>
     <!-- 侧边栏 -->
-
-    <!-- 分页 -->
-    <div class="text-center">
-      <v-pagination v-model="page" :length="6"></v-pagination>
-    </div>
+    <v-content class="navigation">
+      <v-divider vertical></v-divider>
+    </v-content>
   </v-content>
 </template>
 
@@ -70,6 +74,10 @@ export default {
 .blog-content {
   margin: 0 0 0 10%;
   width: 70%;
-
+  float: left;
+}
+.navigation {
+  height: 100%;
+  float: left;
 }
 </style>
