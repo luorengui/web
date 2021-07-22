@@ -1,13 +1,11 @@
 <template>
-
   <v-app @click="VisableNav">
     <Navigation :drawer="drawer"></Navigation>
     <Header @showNav="showNav" @getSelectTab="getSelectTab"></Header>
     <keep-alive>
-
       <Main :selectTab="selectTab"></Main>
     </keep-alive>
-    
+
     <Footer></Footer>
   </v-app>
 </template>
@@ -27,22 +25,21 @@ export default {
     Main,
   },
   data: () => ({
-    drawer: {isVisable:false},
-    selectTab:"",
-    
+    drawer: { isVisable: false },
+    selectTab: "",
   }),
   methods: {
     showNav(isShow) {
-      console.log(isShow,"dddd")
+      console.log(isShow, "dddd");
       this.drawer.isVisable = isShow;
     },
-    getSelectTab(tab){
-      this.selectTab = tab
-      console.log(this.selectTab)
+    getSelectTab(tab) {
+      this.selectTab = tab;
+      console.log(this.selectTab);
     },
-    VisableNav(){
-      this.drawer.isVisable = !this.drawer.isVisable
-    }
+    VisableNav() {
+      this.drawer.isVisable = !this.drawer.isVisable;
+    },
   },
 };
 </script>

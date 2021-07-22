@@ -1,5 +1,5 @@
 <template>
-    <v-app-bar app color="white">
+    <v-app-bar color="white">
       <v-app-bar-nav-icon @click="showNav"></v-app-bar-nav-icon>
       <v-toolbar-title>hello</v-toolbar-title>
      

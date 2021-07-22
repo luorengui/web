@@ -1,12 +1,13 @@
 <template>
-  <v-main>
+  <v-content class="blog-content">
     <v-tabs v-model="tab" centered>
       <v-tabs-slider color="yellow"></v-tabs-slider>
       <v-tab v-for="item in items" :key="item.name">
         {{ item.value }}
       </v-tab>
     </v-tabs>
-    <v-container fluid>
+    <!-- 内容 -->
+    <v-container>
       <v-row dense>
         <template v-for="n in 8">
           <v-col :key="n">
@@ -21,10 +22,13 @@
       </v-row>
     </v-container>
 
+    <!-- 侧边栏 -->
+
+    <!-- 分页 -->
     <div class="text-center">
       <v-pagination v-model="page" :length="6"></v-pagination>
     </div>
-  </v-main>
+  </v-content>
 </template>
 
 <script>
@@ -62,3 +66,10 @@ export default {
 };
 </script>
 
+<style scoped>
+.blog-content {
+  margin: 0 0 0 10%;
+  width: 70%;
+
+}
+</style>
