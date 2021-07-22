@@ -1,9 +1,10 @@
 <template>
+  <header>
     <v-app-bar color="white">
       <v-app-bar-nav-icon @click="showNav"></v-app-bar-nav-icon>
       <v-toolbar-title>hello</v-toolbar-title>
-     
     </v-app-bar>
+  </header>
 </template>
 
 <script>
@@ -11,12 +12,10 @@ export default {
   name: "Header",
   data: () => ({
     drawer: false,
-   
-   
   }),
   methods: {
     selectTab(name) {
-      this.$emit("getSelectTab", (name));
+      this.$emit("getSelectTab", name);
     },
     showNav() {
       this.$emit("showNav", (this.drawer = !this.drawer));

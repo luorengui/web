@@ -7,22 +7,19 @@
       :value="true"
       absolute
       temporary
-
     >
     </v-navigation-drawer>
-</v-card>
+  </v-card>
 </template>
 
 <script>
 export default {
   name: "Navigation",
   props: ["drawer"],
-  
-  data: () => ({
-    width:"12%",
-  }),
-  methods: {
 
-  },
+  data: () => ({
+    width: "12%",
+  }),
+  methods: {},
 };
 </script>
