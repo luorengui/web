@@ -5,7 +5,7 @@
       <v-col>
         <v-tabs v-model="tab" centered>
           <v-tabs-slider color="yellow"></v-tabs-slider>
-          <v-tab v-for="item in items" :key="item.name">
+          <v-tab v-for="item in tabs" :key="item.name">
             {{ item.value }}
           </v-tab>
         </v-tabs>
@@ -50,7 +50,6 @@
                       <v-list-item
                         v-for="(blog, i) in blogs"
                         :key="i"
-                        :inactive="inactive"
                       >
                         <v-list-item-content>
                           <v-list-item-title
@@ -94,7 +93,7 @@ export default {
   data: () => ({
     page: 1,
     tab: null,
-    items: [
+    tabs: [
       {
         name: "Blog",
         value: "Blog",
